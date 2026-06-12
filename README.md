@@ -34,13 +34,13 @@ todo.db
 1. Clone the repository
 
 ```bash
-git clone https://github.com/asmita-saha-07/flask-todo-app.git
+git clone https://github.com/asmita-saha-07/flask-crud-todo.git
 ```
 
 2. Navigate to the project folder
 
 ```bash
-cd flask-todo-app
+cd flask-crud-todo
 ```
 
 3. Install dependencies
