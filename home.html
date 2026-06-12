@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% if allTodo|length == 0 %}
+<div class="alert alert-success" role="alert">
+    No ToDo present. Add one now!
+</div>
+
+{% else %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">SL No.</th>
+            <th scope="col">Task</th>
+            <th scope="col">Description</th>
+            <th scope="col">Time</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for todo in allTodo %}
+        <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.desc }}</td>
+            <td>{{ todo.date }}</td>
+            <td><a href="/update/{{todo.slno}}" type="button" class="btn btn-success mx-1">Update</button></td>
+            <td><a href="/delete/{{todo.slno}}" type="button" class="btn btn-success mx-1">Delete</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+
+{% endblock %}
